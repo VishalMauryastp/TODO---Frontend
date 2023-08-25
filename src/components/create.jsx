@@ -13,7 +13,7 @@ const Create = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: "http://localhost:3001",
+      url: "https://todo-backend-mf2vlriwv-vishalmauryastp.vercel.app/",
     })
       .then((res) => {
         setData(res.data);
@@ -30,7 +30,7 @@ const Create = () => {
     }
 
     axios
-      .post("http://localhost:3001/add", { task: task })
+      .post("https://todo-backend-mf2vlriwv-vishalmauryastp.vercel.app/add", { task: task })
       .then((result) => {
         toast.success('ToDo Added ',{ autoClose: 800 })
         // alert("TODO added")

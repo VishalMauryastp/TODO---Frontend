@@ -11,7 +11,7 @@ const AllToDo = ({ Data }) => {
   const handleDelete = (id) => {
     axios({
       method: "delete",
-      url: `http://localhost:3001/delete/${id}`,
+      url: `https://todo-backend-mf2vlriwv-vishalmauryastp.vercel.app/delete/${id}`,
     })
       .then(() => {
         toast.success("ToDo Deleted Successfully ", { autoClose: 800 });

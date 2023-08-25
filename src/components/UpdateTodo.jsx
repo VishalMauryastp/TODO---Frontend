@@ -14,7 +14,7 @@ const UpdateTodo = () => {
   useEffect(() => {
     axios({
       method: "get",
-      url: `http://localhost:3001/update/${id}`,
+      url: `https://todo-backend-mf2vlriwv-vishalmauryastp.vercel.app/update/${id}`,
     })
       .then((result) => {
         setData(result.data.task);
@@ -43,7 +43,7 @@ const UpdateTodo = () => {
 
   const handleUpadate = () => {
     axios
-      .put(`http://localhost:3001/update/${id}`, { task: data })
+      .put(`https://todo-backend-mf2vlriwv-vishalmauryastp.vercel.app/update/${id}`, { task: data })
       .then((result) =>{ console.log(result)
         toast.success('Now ToDo Updated ',{ autoClose: 800 })
       })
